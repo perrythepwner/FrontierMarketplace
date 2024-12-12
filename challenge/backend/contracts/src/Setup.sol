@@ -18,7 +18,7 @@ contract Setup {
 
     function isSolved() public view returns (bool) {
         return (
-            address(msg.sender).balance >= PLAYER_STARTING_BALANCE - NFT_VALUE && 
+            address(msg.sender).balance > PLAYER_STARTING_BALANCE - NFT_VALUE && 
             FrontierNFT(TARGET.frontierNFT()).balanceOf(msg.sender) > 0
         );
     }
